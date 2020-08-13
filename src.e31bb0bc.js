@@ -57764,7 +57764,7 @@ function App() {
     className: classes.title
   }), /*#__PURE__*/_react.default.createElement(_Avatar.default, {
     alt: "\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\u043E\u043F\u043E\u043B\u044C\u0441\u043A\u0430\u044F \u0415.\u041B.",
-    src: "/images/avatar.png",
+    src: "./images/avatar.png",
     className: classes.avatar
   }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Typography.default, {
     variant: "h6"
@@ -57775,7 +57775,7 @@ function App() {
       paper: (0, _clsx.default)((_clsx3 = {}, _defineProperty(_clsx3, classes.drawerOpen, open), _defineProperty(_clsx3, classes.drawerClose, !open), _clsx3))
     }
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: "/images/logo.png",
+    src: "./images/logo.png",
     alt: "logo",
     className: classes.logoImg
   }), /*#__PURE__*/_react.default.createElement(_List.default, null, /*#__PURE__*/_react.default.createElement(_ListItem.default, {
