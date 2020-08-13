@@ -55628,6 +55628,9 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
     content: {
       flexGrow: 1,
       padding: theme.spacing(3),
+      maxWidth: 1280,
+      marginLeft: 'auto',
+      marginRight: 'auto',
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
@@ -55647,6 +55650,9 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
     },
     notice: {
       marginTop: theme.spacing(2)
+    },
+    protocolUpload: {
+      minWidth: theme.spacing(25)
     },
     selectEmpty: {
       marginTop: theme.spacing(2)
@@ -55788,19 +55794,21 @@ function Content() {
     style: {
       display: 'flex'
     }
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_InputLabel.default, {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: classes.protocolUpload
+  }, /*#__PURE__*/_react.default.createElement(_InputLabel.default, {
     shrink: true
   }, "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u043F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u0430"), /*#__PURE__*/_react.default.createElement("input", {
     accept: "image/*",
     className: classes.input,
-    id: "contained-button-file",
+    id: "protocol-upload-input",
     multiple: true,
     type: "file",
     style: {
       display: 'none'
     }
   }), /*#__PURE__*/_react.default.createElement("label", {
-    htmlFor: "contained-button-file",
+    htmlFor: "protocol-upload-input",
     style: {
       marginTop: 20
     }
