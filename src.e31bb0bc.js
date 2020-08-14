@@ -55631,6 +55631,7 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       maxWidth: 1280,
       marginLeft: 'auto',
       marginRight: 'auto',
+      marginTop: 20,
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
@@ -55831,193 +55832,7 @@ function Content() {
     disabled: true
   }, "\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u043A\u0430\u043A \u0447\u0435\u0440\u043D\u043E\u0432\u0438\u043A")));
 }
-},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Accordion":"../node_modules/@material-ui/core/esm/Accordion/index.js","@material-ui/core/AccordionDetails":"../node_modules/@material-ui/core/esm/AccordionDetails/index.js","@material-ui/core/AccordionSummary":"../node_modules/@material-ui/core/esm/AccordionSummary/index.js","@material-ui/core/Breadcrumbs":"../node_modules/@material-ui/core/esm/Breadcrumbs/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/icons/ExpandMore":"../node_modules/@material-ui/icons/ExpandMore.js","@material-ui/core/FormControl":"../node_modules/@material-ui/core/esm/FormControl/index.js","@material-ui/icons/Help":"../node_modules/@material-ui/icons/Help.js","@material-ui/core/IconButton":"../node_modules/@material-ui/core/esm/IconButton/index.js","@material-ui/icons/Info":"../node_modules/@material-ui/icons/Info.js","@material-ui/core/InputLabel":"../node_modules/@material-ui/core/esm/InputLabel/index.js","./InquiryOfQuotations":"InquiryOfQuotations.js","@material-ui/core/Link":"../node_modules/@material-ui/core/esm/Link/index.js","@material-ui/core/MenuItem":"../node_modules/@material-ui/core/esm/MenuItem/index.js","./ProcurementCommissions":"ProcurementCommissions.js","@material-ui/icons/PublishOutlined":"../node_modules/@material-ui/icons/PublishOutlined.js","@material-ui/core/Select":"../node_modules/@material-ui/core/esm/Select/index.js","@material-ui/icons/SystemUpdateAltOutlined":"../node_modules/@material-ui/icons/SystemUpdateAltOutlined.js","@material-ui/core/TextField":"../node_modules/@material-ui/core/esm/TextField/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js"}],"../node_modules/@material-ui/core/esm/Divider/Divider.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.styles = void 0;
-
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutProperties"));
-
-var React = _interopRequireWildcard(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _clsx = _interopRequireDefault(require("clsx"));
-
-var _withStyles = _interopRequireDefault(require("../styles/withStyles"));
-
-var _colorManipulator = require("../styles/colorManipulator");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      height: 1,
-      margin: 0,
-      // Reset browser default style.
-      border: 'none',
-      flexShrink: 0,
-      backgroundColor: theme.palette.divider
-    },
-
-    /* Styles applied to the root element if `absolute={true}`. */
-    absolute: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      width: '100%'
-    },
-
-    /* Styles applied to the root element if `variant="inset"`. */
-    inset: {
-      marginLeft: 72
-    },
-
-    /* Styles applied to the root element if `light={true}`. */
-    light: {
-      backgroundColor: (0, _colorManipulator.fade)(theme.palette.divider, 0.08)
-    },
-
-    /* Styles applied to the root element if `variant="middle"`. */
-    middle: {
-      marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2)
-    },
-
-    /* Styles applied to the root element if `orientation="vertical"`. */
-    vertical: {
-      height: '100%',
-      width: 1
-    },
-
-    /* Styles applied to the root element if `flexItem={true}`. */
-    flexItem: {
-      alignSelf: 'stretch',
-      height: 'auto'
-    }
-  };
-};
-
-exports.styles = styles;
-var Divider = /*#__PURE__*/React.forwardRef(function Divider(props, ref) {
-  var _props$absolute = props.absolute,
-      absolute = _props$absolute === void 0 ? false : _props$absolute,
-      classes = props.classes,
-      className = props.className,
-      _props$component = props.component,
-      Component = _props$component === void 0 ? 'hr' : _props$component,
-      _props$flexItem = props.flexItem,
-      flexItem = _props$flexItem === void 0 ? false : _props$flexItem,
-      _props$light = props.light,
-      light = _props$light === void 0 ? false : _props$light,
-      _props$orientation = props.orientation,
-      orientation = _props$orientation === void 0 ? 'horizontal' : _props$orientation,
-      _props$role = props.role,
-      role = _props$role === void 0 ? Component !== 'hr' ? 'separator' : undefined : _props$role,
-      _props$variant = props.variant,
-      variant = _props$variant === void 0 ? 'fullWidth' : _props$variant,
-      other = (0, _objectWithoutProperties2.default)(props, ["absolute", "classes", "className", "component", "flexItem", "light", "orientation", "role", "variant"]);
-  return /*#__PURE__*/React.createElement(Component, (0, _extends2.default)({
-    className: (0, _clsx.default)(classes.root, className, variant !== 'fullWidth' && classes[variant], absolute && classes.absolute, flexItem && classes.flexItem, light && classes.light, orientation === 'vertical' && classes.vertical),
-    role: role,
-    ref: ref
-  }, other));
-});
-"development" !== "production" ? Divider.propTypes = {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit the d.ts file and run "yarn proptypes"     |
-  // ----------------------------------------------------------------------
-
-  /**
-   * Absolutely position the element.
-   */
-  absolute: _propTypes.default.bool,
-
-  /**
-   * @ignore
-   */
-  children: _propTypes.default.node,
-
-  /**
-   * Override or extend the styles applied to the component.
-   * See [CSS API](#css) below for more details.
-   */
-  classes: _propTypes.default.object,
-
-  /**
-   * @ignore
-   */
-  className: _propTypes.default.string,
-
-  /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */
-  component: _propTypes.default
-  /* @typescript-to-proptypes-ignore */
-  .elementType,
-
-  /**
-   * If `true`, a vertical divider will have the correct height when used in flex container.
-   * (By default, a vertical divider will have a calculated height of `0px` if it is the child of a flex container.)
-   */
-  flexItem: _propTypes.default.bool,
-
-  /**
-   * If `true`, the divider will have a lighter color.
-   */
-  light: _propTypes.default.bool,
-
-  /**
-   * The divider orientation.
-   */
-  orientation: _propTypes.default.oneOf(['horizontal', 'vertical']),
-
-  /**
-   * @ignore
-   */
-  role: _propTypes.default.string,
-
-  /**
-   * The variant to use.
-   */
-  variant: _propTypes.default.oneOf(['fullWidth', 'inset', 'middle'])
-} : void 0;
-
-var _default = (0, _withStyles.default)(styles, {
-  name: 'MuiDivider'
-})(Divider);
-
-exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutProperties":"../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","clsx":"../node_modules/clsx/dist/clsx.m.js","../styles/withStyles":"../node_modules/@material-ui/core/esm/styles/withStyles.js","../styles/colorManipulator":"../node_modules/@material-ui/core/esm/styles/colorManipulator.js"}],"../node_modules/@material-ui/core/esm/Divider/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "default", {
-  enumerable: true,
-  get: function () {
-    return _Divider.default;
-  }
-});
-
-var _Divider = _interopRequireDefault(require("./Divider"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Divider":"../node_modules/@material-ui/core/esm/Divider/Divider.js"}],"../node_modules/@material-ui/core/esm/Fade/Fade.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Accordion":"../node_modules/@material-ui/core/esm/Accordion/index.js","@material-ui/core/AccordionDetails":"../node_modules/@material-ui/core/esm/AccordionDetails/index.js","@material-ui/core/AccordionSummary":"../node_modules/@material-ui/core/esm/AccordionSummary/index.js","@material-ui/core/Breadcrumbs":"../node_modules/@material-ui/core/esm/Breadcrumbs/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/icons/ExpandMore":"../node_modules/@material-ui/icons/ExpandMore.js","@material-ui/core/FormControl":"../node_modules/@material-ui/core/esm/FormControl/index.js","@material-ui/icons/Help":"../node_modules/@material-ui/icons/Help.js","@material-ui/core/IconButton":"../node_modules/@material-ui/core/esm/IconButton/index.js","@material-ui/icons/Info":"../node_modules/@material-ui/icons/Info.js","@material-ui/core/InputLabel":"../node_modules/@material-ui/core/esm/InputLabel/index.js","./InquiryOfQuotations":"InquiryOfQuotations.js","@material-ui/core/Link":"../node_modules/@material-ui/core/esm/Link/index.js","@material-ui/core/MenuItem":"../node_modules/@material-ui/core/esm/MenuItem/index.js","./ProcurementCommissions":"ProcurementCommissions.js","@material-ui/icons/PublishOutlined":"../node_modules/@material-ui/icons/PublishOutlined.js","@material-ui/core/Select":"../node_modules/@material-ui/core/esm/Select/index.js","@material-ui/icons/SystemUpdateAltOutlined":"../node_modules/@material-ui/icons/SystemUpdateAltOutlined.js","@material-ui/core/TextField":"../node_modules/@material-ui/core/esm/TextField/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js"}],"../node_modules/@material-ui/core/esm/Fade/Fade.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -57625,8 +57440,6 @@ var _CssBaseline = _interopRequireDefault(require("@material-ui/core/CssBaseline
 
 var _Content = _interopRequireDefault(require("./Content"));
 
-var _Divider = _interopRequireDefault(require("@material-ui/core/Divider"));
-
 var _Drawer = _interopRequireDefault(require("@material-ui/core/Drawer"));
 
 var _FolderOpen = _interopRequireDefault(require("@material-ui/icons/FolderOpen"));
@@ -57677,16 +57490,21 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var drawerWidth = 250;
+var drawerWidth = 280;
 var useStyles = (0, _styles.makeStyles)(function (theme) {
   return {
     appBar: {
-      marginLeft: theme.spacing(7) + 1,
-      width: "calc(100% - ".concat(theme.spacing(7) + 1, "px)"),
+      marginLeft: 105,
+      width: "calc(100% - 105px)",
+      color: 'inherit',
+      backgroundColor: 'inherit',
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen
-      })
+      }),
+      '& > *': {
+        height: 100
+      }
     },
     appBarShift: {
       marginLeft: drawerWidth,
@@ -57708,10 +57526,28 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
         duration: theme.transitions.duration.leavingScreen
       }),
       overflowX: 'hidden',
-      width: theme.spacing(7) + 1
+      width: 105
     }, theme.breakpoints.up('sm'), {
-      width: theme.spacing(7) + 1
+      width: 105
     }),
+    drawerList: {
+      paddingLeft: 0,
+      paddingTop: 14,
+      '& svg': {
+        width: 40,
+        height: 40,
+        marginRight: 32
+      },
+      '& > *': {
+        paddingLeft: 32,
+        paddingTop: 15,
+        paddingBottom: 15
+      },
+      '& > .Mui-selected': {
+        marginTop: 18,
+        marginBottom: 6
+      }
+    },
     drawerOpen: {
       width: drawerWidth,
       transition: theme.transitions.create('width', {
@@ -57723,10 +57559,19 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       display: 'block',
       marginLeft: 'auto',
       marginRight: 'auto',
-      width: '4em'
+      marginTop: 18,
+      width: 60
+    },
+    logoTxt: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginTop: 33,
+      fontSize: '1.65em',
+      fontWeight: 'bold'
     },
     root: {
-      display: 'flex'
+      display: 'flex',
+      backgroundColor: '#f6fbfe'
     },
     searchButton: {
       marginRight: theme.spacing(2)
@@ -57734,12 +57579,18 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
     title: {
       flexGrow: 1
     },
-    toolbar: _objectSpread({
+    toolbar: _objectSpread(_objectSpread({
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'flex-end',
-      padding: theme.spacing(0, 1)
-    }, theme.mixins.toolbar)
+      justifyContent: 'center',
+      padding: theme.spacing(0, 1),
+      marginTop: 85
+    }, theme.mixins.toolbar), {}, {
+      '& svg': {
+        width: 50,
+        height: 50
+      }
+    })
   };
 });
 
@@ -57765,7 +57616,7 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_Toolbar.default, null, /*#__PURE__*/_react.default.createElement(_IconButton.default, {
     edge: "start",
     className: classes.searchButton,
-    color: "inherit",
+    color: "default",
     "aria-label": "search"
   }, /*#__PURE__*/_react.default.createElement(_Search.default, null)), /*#__PURE__*/_react.default.createElement(_Typography.default, {
     variant: "h6",
@@ -57786,7 +57637,11 @@ function App() {
     src: "./images/logo.png",
     alt: "logo",
     className: classes.logoImg
-  }), /*#__PURE__*/_react.default.createElement(_List.default, null, /*#__PURE__*/_react.default.createElement(_ListItem.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Typography.default, {
+    className: classes.logoTxt
+  }, "\u0413\u041E\u0421 2.0"), /*#__PURE__*/_react.default.createElement(_List.default, {
+    className: classes.drawerList
+  }, /*#__PURE__*/_react.default.createElement(_ListItem.default, {
     button: true,
     key: "\u0410\u0440\u0445\u0438\u0432"
   }, /*#__PURE__*/_react.default.createElement(_ListItemIcon.default, null, /*#__PURE__*/_react.default.createElement(_Storage.default, null)), /*#__PURE__*/_react.default.createElement(_ListItemText.default, {
@@ -57822,13 +57677,13 @@ function App() {
     key: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
   }, /*#__PURE__*/_react.default.createElement(_ListItemIcon.default, null, /*#__PURE__*/_react.default.createElement(_SettingsOutlined.default, null)), /*#__PURE__*/_react.default.createElement(_ListItemText.default, {
     primary: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
-  }))), /*#__PURE__*/_react.default.createElement(_Divider.default, null), /*#__PURE__*/_react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     className: classes.toolbar
   }, /*#__PURE__*/_react.default.createElement(_IconButton.default, {
     onClick: handleDrawerOpenClose
   }, open ? /*#__PURE__*/_react.default.createElement(_ChevronLeft.default, null) : /*#__PURE__*/_react.default.createElement(_ChevronRight.default, null)))), /*#__PURE__*/_react.default.createElement(_Content.default, null));
 }
-},{"react":"../node_modules/react/index.js","clsx":"../node_modules/clsx/dist/clsx.m.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/AppBar":"../node_modules/@material-ui/core/esm/AppBar/index.js","@material-ui/core/Avatar":"../node_modules/@material-ui/core/esm/Avatar/index.js","@material-ui/icons/CheckCircleOutline":"../node_modules/@material-ui/icons/CheckCircleOutline.js","@material-ui/icons/ChevronLeft":"../node_modules/@material-ui/icons/ChevronLeft.js","@material-ui/icons/ChevronRight":"../node_modules/@material-ui/icons/ChevronRight.js","@material-ui/core/CssBaseline":"../node_modules/@material-ui/core/esm/CssBaseline/index.js","./Content":"Content.js","@material-ui/core/Divider":"../node_modules/@material-ui/core/esm/Divider/index.js","@material-ui/core/Drawer":"../node_modules/@material-ui/core/esm/Drawer/index.js","@material-ui/icons/FolderOpen":"../node_modules/@material-ui/icons/FolderOpen.js","@material-ui/core/IconButton":"../node_modules/@material-ui/core/esm/IconButton/index.js","@material-ui/core/List":"../node_modules/@material-ui/core/esm/List/index.js","@material-ui/core/ListItem":"../node_modules/@material-ui/core/esm/ListItem/index.js","@material-ui/core/ListItemIcon":"../node_modules/@material-ui/core/esm/ListItemIcon/index.js","@material-ui/core/ListItemText":"../node_modules/@material-ui/core/esm/ListItemText/index.js","@material-ui/icons/NotificationsNone":"../node_modules/@material-ui/icons/NotificationsNone.js","@material-ui/icons/Search":"../node_modules/@material-ui/icons/Search.js","@material-ui/icons/SettingsOutlined":"../node_modules/@material-ui/icons/SettingsOutlined.js","@material-ui/icons/ShowChart":"../node_modules/@material-ui/icons/ShowChart.js","@material-ui/icons/Storage":"../node_modules/@material-ui/icons/Storage.js","@material-ui/core/Toolbar":"../node_modules/@material-ui/core/esm/Toolbar/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/icons/WebAsset":"../node_modules/@material-ui/icons/WebAsset.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","clsx":"../node_modules/clsx/dist/clsx.m.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/AppBar":"../node_modules/@material-ui/core/esm/AppBar/index.js","@material-ui/core/Avatar":"../node_modules/@material-ui/core/esm/Avatar/index.js","@material-ui/icons/CheckCircleOutline":"../node_modules/@material-ui/icons/CheckCircleOutline.js","@material-ui/icons/ChevronLeft":"../node_modules/@material-ui/icons/ChevronLeft.js","@material-ui/icons/ChevronRight":"../node_modules/@material-ui/icons/ChevronRight.js","@material-ui/core/CssBaseline":"../node_modules/@material-ui/core/esm/CssBaseline/index.js","./Content":"Content.js","@material-ui/core/Drawer":"../node_modules/@material-ui/core/esm/Drawer/index.js","@material-ui/icons/FolderOpen":"../node_modules/@material-ui/icons/FolderOpen.js","@material-ui/core/IconButton":"../node_modules/@material-ui/core/esm/IconButton/index.js","@material-ui/core/List":"../node_modules/@material-ui/core/esm/List/index.js","@material-ui/core/ListItem":"../node_modules/@material-ui/core/esm/ListItem/index.js","@material-ui/core/ListItemIcon":"../node_modules/@material-ui/core/esm/ListItemIcon/index.js","@material-ui/core/ListItemText":"../node_modules/@material-ui/core/esm/ListItemText/index.js","@material-ui/icons/NotificationsNone":"../node_modules/@material-ui/icons/NotificationsNone.js","@material-ui/icons/Search":"../node_modules/@material-ui/icons/Search.js","@material-ui/icons/SettingsOutlined":"../node_modules/@material-ui/icons/SettingsOutlined.js","@material-ui/icons/ShowChart":"../node_modules/@material-ui/icons/ShowChart.js","@material-ui/icons/Storage":"../node_modules/@material-ui/icons/Storage.js","@material-ui/core/Toolbar":"../node_modules/@material-ui/core/esm/Toolbar/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/icons/WebAsset":"../node_modules/@material-ui/icons/WebAsset.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -57944,7 +57799,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35673" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33349" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
