@@ -55608,14 +55608,12 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var useStyles = (0, _styles.makeStyles)(function (theme) {
   return {
+    breadcrumb: {
+      marginTop: 11,
+      fontSize: '1.6em'
+    },
     button: {
       margin: theme.spacing(1)
     },
@@ -55631,7 +55629,7 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       maxWidth: 1280,
       marginLeft: 'auto',
       marginRight: 'auto',
-      marginTop: 20,
+      marginTop: 100,
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
@@ -55652,6 +55650,11 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
     notice: {
       marginTop: theme.spacing(2)
     },
+    pageHead: {
+      marginTop: 50,
+      marginBottom: 45,
+      fontSize: 45
+    },
     protocolUpload: {
       minWidth: theme.spacing(25)
     },
@@ -55662,13 +55665,7 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
       width: 200
-    },
-    toolbar: _objectSpread({
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-      padding: theme.spacing(0, 1)
-    }, theme.mixins.toolbar)
+    }
   };
 });
 
@@ -55690,10 +55687,10 @@ function Content() {
 
   return /*#__PURE__*/_react.default.createElement("main", {
     className: classes.content
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: classes.toolbar
-  }), /*#__PURE__*/_react.default.createElement(_Breadcrumbs.default, {
-    "aria-label": "breadcrumb"
+  }, /*#__PURE__*/_react.default.createElement(_Breadcrumbs.default, {
+    "aria-label": "breadcrumb",
+    separator: ">",
+    className: classes.breadcrumb
   }, /*#__PURE__*/_react.default.createElement(_Link.default, {
     color: "inherit",
     href: "/",
@@ -55706,11 +55703,10 @@ function Content() {
     color: "inherit",
     href: "/",
     onClick: handleClick
-  }, "0146200002018002274"), /*#__PURE__*/_react.default.createElement(_Typography.default, {
-    color: "textPrimary"
-  }, "\u0420\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u043D\u0438\u0435 \u0437\u0430\u044F\u0432\u043E\u043A")), /*#__PURE__*/_react.default.createElement(_Typography.default, {
+  }, "0146200002018002274"), /*#__PURE__*/_react.default.createElement("span", null, "\u0420\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u043D\u0438\u0435 \u0437\u0430\u044F\u0432\u043E\u043A")), /*#__PURE__*/_react.default.createElement(_Typography.default, {
     variant: "h1",
-    component: "h2",
+    component: "h1",
+    className: classes.pageHead,
     gutterBottom: true
   }, "\u0420\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u043D\u0438\u0435 \u0437\u0430\u044F\u0432\u043E\u043A"), /*#__PURE__*/_react.default.createElement(_InquiryOfQuotations.default, null), /*#__PURE__*/_react.default.createElement(_ProcurementCommissions.default, null), /*#__PURE__*/_react.default.createElement(_Typography.default, {
     variant: "h2",
@@ -57498,6 +57494,8 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       width: "calc(100% - 105px)",
       color: 'inherit',
       backgroundColor: 'inherit',
+      boxShadow: 'none',
+      borderBottom: '1px solid #e1e7ea',
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen
