@@ -57572,7 +57572,11 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       backgroundColor: '#f6fbfe'
     },
     searchButton: {
-      marginRight: theme.spacing(2)
+      marginLeft: 6,
+      '& svg': {
+        width: 48,
+        height: 48
+      }
     },
     title: {
       flexGrow: 1
@@ -57797,7 +57801,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33349" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40795" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
