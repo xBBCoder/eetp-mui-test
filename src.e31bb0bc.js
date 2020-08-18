@@ -55655,6 +55655,10 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       marginBottom: 45,
       fontSize: 45
     },
+    pageSubHead: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold'
+    },
     protocolUpload: {
       minWidth: theme.spacing(25)
     },
@@ -55711,7 +55715,8 @@ function Content() {
   }, "\u0420\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u043D\u0438\u0435 \u0437\u0430\u044F\u0432\u043E\u043A"), /*#__PURE__*/_react.default.createElement(_InquiryOfQuotations.default, null), /*#__PURE__*/_react.default.createElement(_ProcurementCommissions.default, null), /*#__PURE__*/_react.default.createElement(_Typography.default, {
     variant: "h2",
     component: "h2",
-    gutterBottom: true
+    gutterBottom: true,
+    className: classes.pageSubHead
   }, "\u0417\u0430\u044F\u0432\u043A\u0438"), /*#__PURE__*/_react.default.createElement(_Accordion.default, {
     defaultExpanded: true
   }, /*#__PURE__*/_react.default.createElement(_AccordionDetails.default, {
